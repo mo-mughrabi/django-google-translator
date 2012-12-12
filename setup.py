@@ -10,6 +10,10 @@ setup(
     url='https://github.com/mo-mughrabi/django-google-translator/tree/master',
     packages=find_packages(),
     zip_safe=False,
+    install_requires=[
+        'Django==1.4.3',
+        'polib==1.0.2',
+        ],
     classifiers=[
         'Development Status :: 1 - Alpha',
         'Environment :: Web Environment',
