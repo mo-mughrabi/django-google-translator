@@ -18,6 +18,7 @@ class Command(BaseCommand):
 
         languages           = getattr(settings, 'LANGUAGES', None)
         default_language    = getattr(settings, 'LANGUAGE_CODE', None)
+
         if not (languages or default_language):
             raise CommandError('LANGUAGES or LANGUAGE_CODE is not defined in django settings')
 
@@ -34,7 +35,7 @@ class Command(BaseCommand):
                     for entry in po:
                         translation = Google(entry.msgid, default_language, language)
                         entry.msgstr=translation.output
-                        self.stdout.write('String %s is translated to %s' % (entry.msgid, translation.output))
+                        self.stdout.write('String %s is translated to %s\n' % (entry.msgid, translation.output))
                     po.save()
 
 
