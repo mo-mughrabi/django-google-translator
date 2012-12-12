@@ -12,7 +12,9 @@ INSTALL
 
 to install run the following
 
-`
+```
+
 pip install git+https://github.com/mo-mughrabi/django-google-translator/tree/master
-`
+
+```
 
