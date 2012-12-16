@@ -11,7 +11,6 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     install_requires=[
-        'Django==1.4.3',
         'polib==1.0.2',
         ],
     classifiers=[
